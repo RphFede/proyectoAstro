@@ -56,7 +56,7 @@ const { title = "Reflexiones de sillón",
 			
 			// Función para inicializar scripts que necesitan reiniciarse
 			function initializePageScripts() {
-				console.log("🔄 Inicializando scripts de página");
+				
 				
 				// Aquí puedes agregar:
 				// - Reinicialización de librerías de terceros
@@ -78,7 +78,7 @@ const { title = "Reflexiones de sillón",
 				
 				// Si no existe, recrearlo
 				if (!fontLink || fontLink.getAttribute('media') !== 'all') {
-					console.log("🔤 Asegurando carga de fuente Exo 2");
+					
 					
 					// Asegurar que los enlaces de preconexión existan
 					if (!document.querySelector('link[href="https://fonts.googleapis.com"]')) {
@@ -118,7 +118,7 @@ const { title = "Reflexiones de sillón",
 			
 			// ✅ EVENTO PRINCIPAL: Se ejecuta después de cada transición
 			document.addEventListener('astro:after-swap', () => {
-				console.log("✨ Página cambiada con View Transitions!");
+				
 				initializePageScripts();
 			});
 			
@@ -126,18 +126,18 @@ const { title = "Reflexiones de sillón",
 			
 			// Antes de preparar la nueva página
 			document.addEventListener('astro:before-preparation', (event) => {
-				console.log("🔄 Preparando nueva página...");
+				
 				// Aquí puedes mostrar un loader o limpiar estados
 			});
 			
 			// Después de preparar, antes de intercambiar
 			document.addEventListener('astro:after-preparation', () => {
-				console.log("✅ Nueva página preparada");
+				
 			});
 			
 			// Antes del intercambio visual
 			document.addEventListener('astro:before-swap', () => {
-				console.log("🔄 Iniciando transición visual...");
+				
 				// Último momento para limpiar o preparar la transición
 			});
 			
@@ -168,13 +168,13 @@ const { title = "Reflexiones de sillón",
 		<script>
 			// Solo en desarrollo - puedes remover esto en producción
 			if (import.meta.env.DEV) {
-				console.log("🚀 Modo desarrollo: View Transitions activas");
+				
 				
 				// Mostrar información de transiciones en consola
 				let transitionCount = 0;
 				document.addEventListener('astro:after-swap', () => {
 					transitionCount++;
-					console.log(`📊 Transición #${transitionCount} completada`);
+					
 				});
 			}
 		</script>

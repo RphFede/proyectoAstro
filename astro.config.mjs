@@ -13,12 +13,6 @@ export default defineConfig({
     clientPrerender: true
   },
   vite: {
-    server: {
-      watch: {
-        usePolling: true,
-        interval: 100
-      }
-    },
     css: {
       preprocessorOptions: {
         stylus: {
