@@ -6,8 +6,8 @@
     </p>
   
     <blockquote class="philosophical-quote">
-        <p>... todas las faltas que se cometen, no proceden sino de esta especie de ignorancia, que hace que se crea saber lo que no se sabe.<p/>
-        <p><strong>He aquí la más vergonzosa ignorancia; he aquí la que es causa de todos los males.</strong>
+        <p>... todas las faltas que se cometen, no proceden sino de esta especie de ignorancia, que hace que se crea saber lo que no se sabe.</p>
+        <p><strong>He aquí la más vergonzosa ignorancia; he aquí la que es causa de todos los males.</strong></p>
         <footer>
             <cite>— Platón</cite>
         </footer>
@@ -22,16 +22,17 @@
   .welcome-layout {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 0 1rem 2rem 1rem;  /* Sin padding-top: lo maneja ContentSheet */
     line-height: 1.7;
     color: #374151;
   }
   
   .welcome-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: #1f2937;
     text-align: center;
+    margin-top: 0 !important; /* Iguala posición con .page-title de otras páginas */
     margin-bottom: 2rem;
     line-height: 1.2;
   }

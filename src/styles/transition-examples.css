@@ -57,6 +57,7 @@
    3. ZOOM ELEGANTE (Efecto de profundidad)
    ======================================== */
 
+/*
 ::view-transition-old(root) {
   animation: zoom-out 0.6s ease-in-out;
 }
@@ -78,6 +79,7 @@
     opacity: 0;
   }
 }
+*/
 
 
 /* ========================================

@@ -28,7 +28,6 @@ html, body {
 }
 
 body {
-    overflow-x: hidden; /* Previene scroll horizontal */
     overflow-y: scroll; /* Fuerza la barra de scroll vertical siempre visible */
     font-family: 'Exo 2'; /* se aplica la fuente */
     display: flex;
@@ -79,11 +78,23 @@ main {
 }
 
 .page-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: #1f2937;
     text-align: center;
-    margin-top: 3.6rem;
-    margin-bottom: 2.5rem;
+    margin-top: 0;        /* Sin margen propio: lo controla el padding de ContentSheet */
+    margin-bottom: 2rem;
     line-height: 1.2;
-  }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+}
